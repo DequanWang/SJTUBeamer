@@ -93,6 +93,7 @@
 \setbeamercolor{frametitle}{use=titlelike,bg=white,fg=titlelike.fg}
 \setbeamercolor{frametitle right}{parent=subsection in head/foot}
 \setbeamertemplate{sidebar right}{}
+\beamertemplatenavigationsymbolsempty
 \addtobeamertemplate{navigation symbols}{}{
   \hbox{
     \raisebox{1.2pt}[0pt][0pt]{
@@ -104,22 +105,28 @@
     }
   }
 }
-\if\EqualOption{outer}{logopos}{bottomright}
-  \addtobeamertemplate{footline}{
-    \hfill%
-    \usebeamertemplate***{navigation symbols}%
-    \llap{\raisebox{1pc}[0pt][0pt]{\insertlogo}}
-    \hspace*{0.1cm}\par
-    \vskip 4pt
-  }{}
-\else
-  \addtobeamertemplate{footline}{
-    \hfill%
-    \usebeamertemplate***{navigation symbols}%
-    \hspace*{0.1cm}\par
-    \vskip 4pt
-  }{}
-\fi
+% \if\EqualOption{outer}{logopos}{bottomright}
+%   \addtobeamertemplate{footline}{
+%     \hfill%
+%     \usebeamertemplate***{navigation symbols}%
+%     \llap{\raisebox{1pc}[0pt][0pt]{\insertlogo}}
+%     \hspace*{0.1cm}\par
+%     \vskip 4pt
+%   }{}
+% \else
+%   \addtobeamertemplate{footline}{
+%     \hfill%
+%     \usebeamertemplate***{navigation symbols}%
+%     \hspace*{0.1cm}\par
+%     \vskip 4pt
+%   }{}
+% \fi
+\addtobeamertemplate{footline}{
+  \hfill%
+  \usebeamertemplate***{navigation symbols}%
+  \hspace*{0.1cm}\par
+  \vskip 4pt
+}{}
 \setbeamertemplate{page number in head/foot}{}
 \endinput
 %%

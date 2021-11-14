@@ -12,7 +12,7 @@
 %% work. If not, see <http://creativecommons.org/licenses/by-nc-sa/4.0/>.
 %% -----------------------------------------------------------------------
 
-\documentclass[xcolor=table,dvipsnames,svgnames,aspectratio=169]{ctexbeamer}
+\documentclass[xcolor=table,dvipsnames,svgnames,aspectratio=169,fontset=macnew]{ctexbeamer}
 % 可以通过 fontset=macnew / fontset=ubuntu / fontset=windows 选项切换字体集
 
 \usepackage{tikz}
@@ -37,7 +37,8 @@
 \usepackage{datetime2}
 \usepackage{fontawesome5}
 \usepackage{hyperref}
-\usepackage[backend=biber,style=gb7714-2015]{biblatex}
+% \usepackage[backend=biber,style=gb7714-2015]{biblatex}
+\usepackage[backend=bibtex,style=ieee,citestyle=numeric,maxcitenames=1,mincitenames=1,firstinits=false,uniquename=false]{biblatex}
 
 \addbibresource{thesis.bib}
 \setbeamertemplate{bibliography item}[text]
@@ -105,7 +106,8 @@
 }
 \lstMakeShortInline[style=style@inline]|
 
-\usetheme[maxplus]{sjtubeamer}
+% \usetheme[maxplus]{sjtubeamer}
+\usetheme[blue,light,max,default]{sjtubeamer}
 % 使用 maxplus/max/min 切换标题页样式
 % 使用 red/blue 切换主色调
 % 使用 light/dark 切换亮/暗色模式
@@ -157,7 +159,7 @@
 \include{contents/thesis}
 \include{contents/summary}
 
-\appendix
+% \appendix
 
 \begin{frame}
   \frametitle{参考文献}
